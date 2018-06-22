@@ -1,0 +1,77 @@
+@mixin fields {
+	//margin-top: 5px;
+	display: block;
+	box-sizing: border-box;
+	color: darken(#F2F2F2, 50%);
+	border: 2px solid darken(#F2F2F2, 5%);
+	border-radius: 0;
+	padding: 8px 15px;
+	box-sizing: border-box;
+	background-color: #F2F2F2;
+	width: 100%;
+	padding: 10px;
+	transition: all 0.3s;
+	margin-top: 5px;
+	&:focus {
+		//color: $color__text-input-focus;
+		border: 2px solid rgba($color2, .5);
+		outline: none;
+	}
+}
+
+body, .caldera-grid {
+	& input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="number"],
+	input[type="tel"],
+	input[type="range"],
+	input[type="date"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="color"],
+	textarea, textarea.form-control,
+	select.form-control {
+		@include fields;
+		box-shadow: none;
+		&:focus {
+			outline: none;
+			box-shadow: none;
+		}
+	}
+	& select.form-control {
+		padding: 0px 0px 0px 10px;
+	}
+}
+
+input[type="checkbox"] {
+	margin-right: .5rem;
+}
+
+/* ==========================================================================
+   Search Form widget
+   ========================================================================== */
+
+
+   .widget .search-form{
+		display: flex;
+		span {
+			display: none;
+		}
+		label {
+			display: block;
+			width: 100%;
+		}
+		input {
+			margin-top: 0;
+			width: 100%;
+		}
+		.search-submit {
+			display: none;
+		}
+   }

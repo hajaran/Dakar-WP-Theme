@@ -1,0 +1,64 @@
+//Layout Settings
+$col-gap: 20px;
+$row-gap: 20px;
+$container: 1200px;
+
+//Grid
+.bc-grid {
+	display: grid;
+	grid-column-gap: $col-gap;
+	grid-row-gap:$row-gap;
+	grid-template-columns: repeat(12, 1fr);
+	.bc-grid-col-1-of-3 {
+		grid-column: span 4;
+	}
+	.bc-grid-col-2-of-3 {
+		grid-column: span 8;
+	}
+	.bc-grid-col-3-of-3, .bc-grid-col-full {
+		grid-column: span 12;
+	}
+	.bc-grid-col-1-of-4 {
+		grid-column: span 3;
+	}
+	.bc-grid-col-half {
+		grid-column: span 6;
+	}
+	.bc-grid-col-3-of-4 {
+		grid-column: span 9;
+	}
+	&.y-align-center {
+		align-items:center;
+	}
+	&.y-align-end {
+		align-items: end;
+	}
+	&.y-align-start {
+		align-items: start;
+	}
+}
+.grid-centered-item {
+	align-self: center;
+}
+//Tablet
+@media screen and (max-width: $tablet) {
+	.bc-grid {
+		.bc-grid-col-1-of-3, .card, .bc-grid-col-1-of-4 {
+			grid-column: span 6 !important;
+			grid-row: auto !important;
+		}
+		.bc-grid-col-2-of-3, .bc-grid-col-3-of-4, .bc-grid-col-half {
+			grid-column: span 12 !important;
+			grid-row: auto !important;
+		}
+	}
+}
+
+//Mobile
+@media screen and (max-width: $mobile) {
+	.bc-grid {
+		.bc-grid-col-1-of-3 , .card, .bc-grid-col-2-of-3, .bc-grid-col-1-of-4  {
+			grid-column: span 12 !important;
+		}
+	}
+}

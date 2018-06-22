@@ -1,0 +1,609 @@
+/* ==========================================================================
+   Palette
+   ========================================================================== */
+/* ==========================================================================
+   Settings
+   ========================================================================== */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px; }
+
+.full-width {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50vw); }
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+	 ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+	 ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+	 ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+	 ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+	 ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none; }
+
+/* Forms
+	 ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *		`fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+	 ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Misc
+	 ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none; }
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.skip-link {
+  display: none; }
+
+/*--------------------------------------------------------------
+# Grid
+--------------------------------------------------------------*/
+.bc-grid {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  grid-template-columns: repeat(12, 1fr); }
+  .bc-grid .bc-grid-col-1-of-3 {
+    grid-column: span 4; }
+  .bc-grid .bc-grid-col-2-of-3 {
+    grid-column: span 8; }
+  .bc-grid .bc-grid-col-3-of-3, .bc-grid .bc-grid-col-full {
+    grid-column: span 12; }
+  .bc-grid .bc-grid-col-1-of-4 {
+    grid-column: span 3; }
+  .bc-grid .bc-grid-col-half {
+    grid-column: span 6; }
+  .bc-grid .bc-grid-col-3-of-4 {
+    grid-column: span 9; }
+  .bc-grid.y-align-center {
+    align-items: center; }
+  .bc-grid.y-align-end {
+    align-items: end; }
+  .bc-grid.y-align-start {
+    align-items: start; }
+
+.grid-centered-item {
+  align-self: center; }
+
+@media screen and (max-width: 800px) {
+  .bc-grid .bc-grid-col-1-of-3, .bc-grid .card, .bc-grid .bc-grid-col-1-of-4 {
+    grid-column: span 6 !important;
+    grid-row: auto !important; }
+  .bc-grid .bc-grid-col-2-of-3, .bc-grid .bc-grid-col-3-of-4, .bc-grid .bc-grid-col-half {
+    grid-column: span 12 !important;
+    grid-row: auto !important; } }
+
+@media screen and (max-width: 600px) {
+  .bc-grid .bc-grid-col-1-of-3, .bc-grid .card, .bc-grid .bc-grid-col-2-of-3, .bc-grid .bc-grid-col-1-of-4 {
+    grid-column: span 12 !important; } }
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+html {
+  font-size: 14px; }
+  @media only screen and (min-width: 480px) {
+    html {
+      font-size: calc(14px + 4 * ((100vw - 480px) / 720)); } }
+  @media only screen and (min-width: 1200px) {
+    html {
+      font-size: 18px; } }
+
+body {
+  color: rgba(0, 0, 0, 0.8);
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.5; }
+
+h1, h2, h3, h4 {
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: .6em 0; }
+
+h1 {
+  font-size: 2.1rem; }
+
+h2 {
+  font-size: 1.73rem; }
+
+h3 {
+  font-size: 1.44rem;
+  color: #412234; }
+
+h4 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: .15rem;
+  position: relative;
+  display: inline-block; }
+  h4:after {
+    content: '';
+    display: block;
+    background: #FFC857;
+    height: 2px;
+    width: 1rem;
+    position: absolute;
+    bottom: -4px;
+    left: 0; }
+
+em {
+  font-family: 'Source Serif Pro', serif;
+  color: rgba(46, 64, 82, 0.5); }
+
+a {
+  color: #2E4052;
+  font-weight: 600;
+  text-decoration: none; }
+
+ul, ol {
+  padding-left: 1rem; }
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+body input[type="text"],
+body input[type="email"],
+body input[type="url"],
+body input[type="password"],
+body input[type="search"],
+body input[type="number"],
+body input[type="tel"],
+body input[type="range"],
+body input[type="date"],
+body input[type="month"],
+body input[type="week"],
+body input[type="time"],
+body input[type="datetime"],
+body input[type="datetime-local"],
+body input[type="color"],
+body textarea, body textarea.form-control,
+body select.form-control, .caldera-grid input[type="text"],
+.caldera-grid input[type="email"],
+.caldera-grid input[type="url"],
+.caldera-grid input[type="password"],
+.caldera-grid input[type="search"],
+.caldera-grid input[type="number"],
+.caldera-grid input[type="tel"],
+.caldera-grid input[type="range"],
+.caldera-grid input[type="date"],
+.caldera-grid input[type="month"],
+.caldera-grid input[type="week"],
+.caldera-grid input[type="time"],
+.caldera-grid input[type="datetime"],
+.caldera-grid input[type="datetime-local"],
+.caldera-grid input[type="color"],
+.caldera-grid textarea, .caldera-grid textarea.form-control,
+.caldera-grid select.form-control {
+  display: block;
+  box-sizing: border-box;
+  color: #737272;
+  border: 2px solid #e5e5e5;
+  border-radius: 0;
+  padding: 8px 15px;
+  box-sizing: border-box;
+  background-color: #F2F2F2;
+  width: 100%;
+  padding: 10px;
+  transition: all 0.3s;
+  margin-top: 5px;
+  box-shadow: none; }
+  body input[type="text"]:focus,
+  body input[type="email"]:focus,
+  body input[type="url"]:focus,
+  body input[type="password"]:focus,
+  body input[type="search"]:focus,
+  body input[type="number"]:focus,
+  body input[type="tel"]:focus,
+  body input[type="range"]:focus,
+  body input[type="date"]:focus,
+  body input[type="month"]:focus,
+  body input[type="week"]:focus,
+  body input[type="time"]:focus,
+  body input[type="datetime"]:focus,
+  body input[type="datetime-local"]:focus,
+  body input[type="color"]:focus,
+  body textarea:focus, body textarea.form-control:focus,
+  body select.form-control:focus, .caldera-grid input[type="text"]:focus,
+  .caldera-grid input[type="email"]:focus,
+  .caldera-grid input[type="url"]:focus,
+  .caldera-grid input[type="password"]:focus,
+  .caldera-grid input[type="search"]:focus,
+  .caldera-grid input[type="number"]:focus,
+  .caldera-grid input[type="tel"]:focus,
+  .caldera-grid input[type="range"]:focus,
+  .caldera-grid input[type="date"]:focus,
+  .caldera-grid input[type="month"]:focus,
+  .caldera-grid input[type="week"]:focus,
+  .caldera-grid input[type="time"]:focus,
+  .caldera-grid input[type="datetime"]:focus,
+  .caldera-grid input[type="datetime-local"]:focus,
+  .caldera-grid input[type="color"]:focus,
+  .caldera-grid textarea:focus, .caldera-grid textarea.form-control:focus,
+  .caldera-grid select.form-control:focus {
+    border: 2px solid rgba(46, 64, 82, 0.5);
+    outline: none; }
+  body input[type="text"]:focus,
+  body input[type="email"]:focus,
+  body input[type="url"]:focus,
+  body input[type="password"]:focus,
+  body input[type="search"]:focus,
+  body input[type="number"]:focus,
+  body input[type="tel"]:focus,
+  body input[type="range"]:focus,
+  body input[type="date"]:focus,
+  body input[type="month"]:focus,
+  body input[type="week"]:focus,
+  body input[type="time"]:focus,
+  body input[type="datetime"]:focus,
+  body input[type="datetime-local"]:focus,
+  body input[type="color"]:focus,
+  body textarea:focus, body textarea.form-control:focus,
+  body select.form-control:focus, .caldera-grid input[type="text"]:focus,
+  .caldera-grid input[type="email"]:focus,
+  .caldera-grid input[type="url"]:focus,
+  .caldera-grid input[type="password"]:focus,
+  .caldera-grid input[type="search"]:focus,
+  .caldera-grid input[type="number"]:focus,
+  .caldera-grid input[type="tel"]:focus,
+  .caldera-grid input[type="range"]:focus,
+  .caldera-grid input[type="date"]:focus,
+  .caldera-grid input[type="month"]:focus,
+  .caldera-grid input[type="week"]:focus,
+  .caldera-grid input[type="time"]:focus,
+  .caldera-grid input[type="datetime"]:focus,
+  .caldera-grid input[type="datetime-local"]:focus,
+  .caldera-grid input[type="color"]:focus,
+  .caldera-grid textarea:focus, .caldera-grid textarea.form-control:focus,
+  .caldera-grid select.form-control:focus {
+    outline: none;
+    box-shadow: none; }
+
+body select.form-control, .caldera-grid select.form-control {
+  padding: 0px 0px 0px 10px; }
+
+input[type="checkbox"] {
+  margin-right: .5rem; }
+
+/* ==========================================================================
+   Search Form widget
+   ========================================================================== */
+.widget .search-form {
+  display: flex; }
+  .widget .search-form span {
+    display: none; }
+  .widget .search-form label {
+    display: block;
+    width: 100%; }
+  .widget .search-form input {
+    margin-top: 0;
+    width: 100%; }
+  .widget .search-form .search-submit {
+    display: none; }
+
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+input[type="submit"], .btn, .caldera-grid .btn.btn-default, .btn {
+  display: inline-block;
+  padding: 8px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .8rem;
+  letter-spacing: .15rem;
+  margin: 0 1px;
+  transition: .3s;
+  border: solid 2px #FFC857; }
+  input[type="submit"]:hover, .btn:hover, .caldera-grid .btn.btn-default:hover, .btn:hover {
+    background: #FFC857; }
+  input[type="submit"]:focus, .btn:focus, .caldera-grid .btn.btn-default:focus, .btn:focus {
+    color: #2E4052; }
+  input[type="submit"]:visited, .btn:visited, .caldera-grid .btn.btn-default:visited, .btn:visited {
+    color: #2E4052 !important; }
+  input[type="submit"].btn-xl, .btn.btn-xl, .caldera-grid .btn.btn-default.btn-xl, .btn.btn-xl {
+    font-size: 1.3rem;
+    padding: 1rem 1.7rem; }
+  input[type="submit"].btn-xs, .btn.btn-xs, .caldera-grid .btn.btn-default.btn-xs, .btn.btn-xs {
+    font-size: .85rem;
+    padding: 5px 10px;
+    border: none;
+    background: #2E4052;
+    color: white !important;
+    letter-spacing: .03rem;
+    text-transform: none; }

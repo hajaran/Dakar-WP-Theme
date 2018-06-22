@@ -1,0 +1,26 @@
+.anim_mouse-scroll {
+	position: absolute;
+	bottom: 30px;
+	left: calc(50% - 1px);
+	span {
+		display: block;
+		width: 2px;
+		background: white;
+		height: 60px;
+		animation: mousescroll cubic-bezier(.82,.01,.27,1) 2s infinite;
+	}
+}
+
+@keyframes mousescroll {
+	0% {
+		height: 10px;
+	}
+	
+	50% {
+		height: 60px;
+	}
+
+	100% {
+		height: 10px;
+	}
+}

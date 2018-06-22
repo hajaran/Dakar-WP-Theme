@@ -1,0 +1,612 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+body {
+	padding-top: 71px;
+}
+@media screen and (min-width: $tablet) {
+	body {
+		padding-top: 71px;
+	}
+}
+@media screen and (max-width: $tablet) {
+	body {
+		padding-top: 50px;
+	}
+}
+
+/* ==========================================================================
+   Page Templates
+   ========================================================================== */
+
+.page-template-default, .template-left-sidebar, .template-right-sidebar {
+    margin-bottom: 2rem;
+    .entry-title {
+        font-size: 2.7rem;
+    }
+    aside {
+        margin-top: 7.05rem !important;
+
+        .widget {
+            border-top: solid 2px rgba($color2, .1);
+            padding: 1rem 0;
+            &:first-of-type {
+                border-top: none;
+            }
+        }
+    }
+    main {
+        padding-top: 2rem;
+    }
+}
+
+.home.page-template-default {
+    main {
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .template-left-sidebar {
+        aside {
+            order: 2 !important;
+        }
+    }
+}
+
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+
+.dakar_hero-section {
+    background: $color1;
+    height: calc(100vh - 71px);
+    position: relative;
+    color: white;
+    text-shadow: 0 2px 3px rgba(black, .3);
+    letter-spacing: .15rem;
+    text-align: center;
+    h1 {
+    	margin: 1rem 0;
+    	line-height: 1.1;
+    }
+    h3 {
+    	margin-bottom: 2rem;
+    	line-height: 1.3;
+    }
+    .btn, h3, a, .btn:visited {
+    	color: white !important;
+    }
+    .btn:hover {
+    	text-shadow: none;
+    	color: $color2 !important;
+    }
+    .background-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .bg-img-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($color4, .6);
+        opacity: 1;
+        z-index: 1;
+        //display: none;
+    }
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+    }
+    .caption {
+        //max-width: 600px;
+        margin: 0 auto;
+        //background: rgba(white, .8);
+        mix-blend-mode: darken;
+    }
+    .side-links {
+        position: absolute;
+        height: 50px;
+        top: 70px;
+        left: calc(-70vh + 50px + 1.6%);
+        z-index: 4;
+        width: 70vh;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        //background: salmon;
+        transform-origin: 100% 100%;
+        transform: rotate(-90deg);
+        a {
+            font-weight: unset;
+            text-transform: uppercase;
+            transition: all .3s;
+            font-size: .8rem;
+            align-self: center;
+            transform-origin: 0 50%;
+            transition-delay: .3s;
+            &:hover {
+                color: $color3 !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet) {
+	.dakar_hero-section {
+		height: calc(100vh - 50px);
+        .side-links {
+            display: none;
+        }
+	}
+}
+
+
+/* ==========================================================================
+   Testimonial
+   ========================================================================== */
+
+.animated.bg-slide{
+	background-color: transparent !important;
+	position: relative;
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: rgba($color2, .05);
+		z-index: -1;
+		height: 100%;
+		width: 100%;
+		transform: translateX(-100%);
+		transition: all $swing 2s;
+	}
+	&.visible:before {
+		transform: translateX(0%);
+	}
+}
+
+
+.light-bg {
+    background-color: rgba($color2, .05);
+}
+.testimonial-section {
+    .container {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+
+.testimonial-slider {
+    background: white;
+    position: relative;
+    overflow: hidden;
+    height: 465px;
+    max-width: 300px;
+    margin: 0 auto;
+    .item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        text-align: center;
+        width: 100%;
+        padding: 30px;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .5s;
+
+        b {
+            display: block;
+        }
+
+        svg {
+            display: block;
+            background: $color1;
+            padding: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        &.active {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    .dots {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        font-size: 0;
+        justify-content: center;
+        align-items: center;
+        .next, .prev {
+            font-size: .8rem;
+            color: rgba($color2, .3);
+            transition: all .3s;
+            cursor: pointer;
+            &:hover {
+                color: $color2;
+            }
+            margin: 0 30px
+        }
+        .next {
+            margin-left: auto;
+        }
+        .prev {
+            margin-right: auto;
+        }
+        .dot {
+            display: inline-block;
+            margin: 3px;
+            height: 7px;
+            width: 7px;
+            border-radius: 50%;
+            background: rgba($color2, .3);
+            transition: all .5s;
+            &.active {
+                background: rgba($color2, 1);
+                transform: scale(1.3);
+            }
+        }
+    }
+}
+
+
+/* ==========================================================================
+   Hotelrooms section
+   ========================================================================== */
+
+.section-hotel-rooms {
+    position: relative;
+    overflow: hidden;
+    padding: 70px 0;
+    .rooms-slider-navigation{
+            display: flex;
+            .prev, .next {
+            	color: white;
+				@include fa-btn;
+				margin: 20px 10px 20px 0;
+            }
+        }
+    .container {
+        position: relative;
+    }
+    .gradient {
+        display: block;
+        height: 100%;
+        width: 40%;
+        background: linear-gradient(to left, white 10% , transparent);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 4;
+        pointer-events: none;
+    }
+    .wrapper {
+        overflow-X: scroll;
+        position: relative;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .slider-featured-rooms {
+         position: relative;
+        display: flex;
+        width: max-content;
+        padding-right: calc(100% - 300px);
+        }
+        .item {
+            box-sizing: border-box;
+            max-width: 300px;
+            text-align: center;
+            background: rgba($color2, .05);
+            margin-right: 30px;
+            font-size: .85rem;
+            &:last-of-type {
+                margin-right: 0;
+            }
+            .thumb {
+                padding-top: 60%;
+                position: relative;
+            }
+            .thumb img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .caption {
+                padding: 30px;
+            }
+            &.best-seller .thumb:after {
+                position: absolute;
+                padding: 6px;
+                width: 70px;
+                height: 70px;
+                text-align:center;
+                font-weight: bold;
+                padding-top: 22px;
+                font-size: .8rem;
+                border-radius: 50%;
+                line-height: 1;
+                text-transform: uppercase;
+                top: -10px;
+                left: calc(50% - 35px);
+                content: "Best Seller";
+                display: block;
+                background: $color3;
+                z-index: 5;
+            }
+        }
+    }
+
+}
+
+/* ==========================================================================
+   Instagram Feed
+   ========================================================================== */
+
+.instafeed-section {
+	   .description {
+    	background: rgba(black, .8) !important;
+    	padding: 10px 0;
+    	text-align: center;
+    	color: white;
+    	font-size: .85rem;
+    	.btn {
+    		border-radius: 3px;
+    		background: #4c68d7;
+    		margin-right: 10px;
+    	}
+    }
+}
+.instafeed-section #instafeed{
+    display: flex;
+
+    .post {
+        flex-basis: 10%;
+        position: relative;
+        padding-top: 10%;
+        overflow: hidden;
+        background: rgba(black, .8);
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .meta {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 3px 8px;
+            margin: 5px;
+            background: rgba(black, .3);
+            border-radius: 2px;
+            color: white;
+        }
+
+    }
+}
+
+@media screen and (max-width: $tablet) {
+		.instafeed-section #instafeed{
+	    flex-wrap: wrap;
+	    .post {
+	        flex-basis: 20%;
+	        padding-top: 20%;
+	        .meta {
+	        	font-size: .8rem;
+	        }
+	    }
+	}
+}
+
+
+
+/* ==========================================================================
+   Surrounding Slideshow
+   ========================================================================== */
+
+.dakar_section-surrounding-slides {
+	padding: 70px 0px;
+	.slides-vignettes {
+		height: 30%;
+		grid-gap: 15px;
+		.vignette {
+			display: block;
+			overflow: hidden !important;
+			position: relative;
+			transition: all .3s;
+			background-color: white;
+			cursor: pointer;
+			img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: .3;
+				transition: all .7s;
+				filter: grayscale(100%);
+			}
+			&.current img, &:hover img {
+				opacity: 1;
+				filter: grayscale(0%);
+			}
+		}
+	}
+	.description {
+		padding: 1px;
+		min-height: 70%;
+		display: flex;
+		& > div {
+			justify-content: center;
+			align-items: center;
+			margin: auto auto;
+			max-width: 350px;
+		}
+		.btn {
+			margin-bottom: 20px;
+		}
+	}
+	.slides {
+		position: relative;
+		padding-top: 130%;
+		overflow: hidden;
+		.item {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			transition: all 1s;
+			opacity: 0;
+			visibility:hidden;
+			overflow: hidden;
+			img {
+			height: 100%;
+			width: 100%;
+			top: 0;
+			object-fit: cover;
+			object-position: center;
+			transform: scale(1.05);
+			transition: all 1.5s;
+			}
+			&.current {
+			opacity: 1;
+			visibility: visible;
+			img {
+				transform: scale(1);
+			}
+			}
+		}
+	}
+	.slides-container {
+		position: relative;
+	}
+	.slides-nav {
+			position: absolute;
+			top: calc(50% - 25px);
+			left: 0;
+			width: 100%;
+			display: flex;
+			z-index: 10;
+			font-size: 1rem;
+			color: white;
+			justify-content: space-between;
+			.next, .prev {
+				@include fa-btn;
+			}
+		}
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+
+footer.site-footer {
+    background-color: $color4;
+    color: white;
+    letter-spacing: .05rem;
+    h3 {
+        margin-top: 0;
+        color: white;
+        margin-bottom: 10px;
+    }
+    .custom-logo {
+        width: 100%;
+        max-width: 200px;
+    }
+    a {
+        color: white;
+        font-weight: 300;
+    }
+        .copyright {
+            background: darken($color4, 5%);
+            font-size: .8rem;
+            margin-top: 100px;
+            padding: 10px 0;
+            text-align: center;
+            a {
+            color: $color3;
+            font-weight: 400;
+        }
+    }
+    .footer-social {
+		margin-bottom: 70px;
+		padding-top: 30px;
+		font-size: 0rem;
+		text-align: center;
+		a {	
+			display: inline-block;
+			box-sizing: border-box;
+			font-size: 20px;
+			margin: 0 10px;
+			border-radius: 50px;
+			padding: 11px;
+			width: 50px;
+			height: 50px;
+			color: rgba(white, .5);
+			transition: all .3s;
+			background-color: rgba(white, .05);
+			&:hover {
+				color: rgba(white, 1);
+			}
+		}
+    }
+}
+
+@media screen and (max-width: $mobile) {
+	.site-footer {
+		text-align: center;
+	}
+}
+
+

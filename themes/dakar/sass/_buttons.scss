@@ -1,0 +1,55 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	&:hover {
+	}
+	&:active,
+	&:focus {
+	}
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+@mixin btn-primary {
+
+    display: inline-block;
+    padding: 8px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .8rem;
+    letter-spacing: .15rem;
+    margin: 0 1px;
+    transition: .3s;
+    border: solid 2px $color3;
+    &:hover {
+        background: $color3;
+    }
+    &:focus {
+        color: $color2;
+    }
+    &:visited {
+        color: $color2 !important;
+    }
+    &.btn-xl {
+        font-size: 1.3rem;
+        padding: 1rem 1.7rem;
+    }
+    &.btn-xs {
+        font-size: .85rem;
+        padding: 5px 10px;
+        border: none;
+        background: $color2;
+        color: white !important;
+        letter-spacing: .03rem;
+        text-transform: none;
+    }
+
+}
+input[type="submit"], .btn, .caldera-grid .btn.btn-default, .btn {
+
+    @include btn-primary ;
+
+}

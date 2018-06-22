@@ -1,0 +1,1340 @@
+/*!
+Theme Name: Dakar
+Theme URI: http://underscores.me/
+Author: Haja Randriakoto
+Author URI: https://becreativeconcept.fr/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: dakar
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Dakar is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/* ==========================================================================
+   Palette
+   ========================================================================== */
+/* ==========================================================================
+   Settings
+   ========================================================================== */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px; }
+
+.full-width {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50vw); }
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+	 ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+	 ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+	 ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+	 ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+	 ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none; }
+
+/* Forms
+	 ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *		`fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+	 ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Misc
+	 ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none; }
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.skip-link {
+  display: none; }
+
+/*--------------------------------------------------------------
+# Grid
+--------------------------------------------------------------*/
+.bc-grid {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  grid-template-columns: repeat(12, 1fr); }
+  .bc-grid .bc-grid-col-1-of-3 {
+    grid-column: span 4; }
+  .bc-grid .bc-grid-col-2-of-3 {
+    grid-column: span 8; }
+  .bc-grid .bc-grid-col-3-of-3, .bc-grid .bc-grid-col-full {
+    grid-column: span 12; }
+  .bc-grid .bc-grid-col-1-of-4 {
+    grid-column: span 3; }
+  .bc-grid .bc-grid-col-half {
+    grid-column: span 6; }
+  .bc-grid .bc-grid-col-3-of-4 {
+    grid-column: span 9; }
+  .bc-grid.y-align-center {
+    align-items: center; }
+  .bc-grid.y-align-end {
+    align-items: end; }
+  .bc-grid.y-align-start {
+    align-items: start; }
+
+.grid-centered-item {
+  align-self: center; }
+
+@media screen and (max-width: 800px) {
+  .bc-grid .bc-grid-col-1-of-3, .bc-grid .card, .bc-grid .bc-grid-col-1-of-4 {
+    grid-column: span 6 !important;
+    grid-row: auto !important; }
+  .bc-grid .bc-grid-col-2-of-3, .bc-grid .bc-grid-col-3-of-4, .bc-grid .bc-grid-col-half {
+    grid-column: span 12 !important;
+    grid-row: auto !important; } }
+
+@media screen and (max-width: 600px) {
+  .bc-grid .bc-grid-col-1-of-3, .bc-grid .card, .bc-grid .bc-grid-col-2-of-3, .bc-grid .bc-grid-col-1-of-4 {
+    grid-column: span 12 !important; } }
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+html {
+  font-size: 14px; }
+  @media only screen and (min-width: 480px) {
+    html {
+      font-size: calc(14px + 4 * ((100vw - 480px) / 720)); } }
+  @media only screen and (min-width: 1200px) {
+    html {
+      font-size: 18px; } }
+
+body {
+  color: rgba(0, 0, 0, 0.8);
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.5; }
+
+h1, h2, h3, h4 {
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: .6em 0; }
+
+h1 {
+  font-size: 2.1rem; }
+
+h2 {
+  font-size: 1.73rem; }
+
+h3 {
+  font-size: 1.44rem;
+  color: #412234; }
+
+h4 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: .15rem;
+  position: relative;
+  display: inline-block; }
+  h4:after {
+    content: '';
+    display: block;
+    background: #FFC857;
+    height: 2px;
+    width: 1rem;
+    position: absolute;
+    bottom: -4px;
+    left: 0; }
+
+em {
+  font-family: 'Source Serif Pro', serif;
+  color: rgba(46, 64, 82, 0.5); }
+
+a {
+  color: #2E4052;
+  font-weight: 600;
+  text-decoration: none; }
+
+ul, ol {
+  padding-left: 1rem; }
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+body input[type="text"],
+body input[type="email"],
+body input[type="url"],
+body input[type="password"],
+body input[type="search"],
+body input[type="number"],
+body input[type="tel"],
+body input[type="range"],
+body input[type="date"],
+body input[type="month"],
+body input[type="week"],
+body input[type="time"],
+body input[type="datetime"],
+body input[type="datetime-local"],
+body input[type="color"],
+body textarea, body textarea.form-control,
+body select.form-control, .caldera-grid input[type="text"],
+.caldera-grid input[type="email"],
+.caldera-grid input[type="url"],
+.caldera-grid input[type="password"],
+.caldera-grid input[type="search"],
+.caldera-grid input[type="number"],
+.caldera-grid input[type="tel"],
+.caldera-grid input[type="range"],
+.caldera-grid input[type="date"],
+.caldera-grid input[type="month"],
+.caldera-grid input[type="week"],
+.caldera-grid input[type="time"],
+.caldera-grid input[type="datetime"],
+.caldera-grid input[type="datetime-local"],
+.caldera-grid input[type="color"],
+.caldera-grid textarea, .caldera-grid textarea.form-control,
+.caldera-grid select.form-control {
+  display: block;
+  box-sizing: border-box;
+  color: #737272;
+  border: 2px solid #e5e5e5;
+  border-radius: 0;
+  padding: 8px 15px;
+  box-sizing: border-box;
+  background-color: #F2F2F2;
+  width: 100%;
+  padding: 10px;
+  transition: all 0.3s;
+  margin-top: 5px;
+  box-shadow: none; }
+  body input[type="text"]:focus,
+  body input[type="email"]:focus,
+  body input[type="url"]:focus,
+  body input[type="password"]:focus,
+  body input[type="search"]:focus,
+  body input[type="number"]:focus,
+  body input[type="tel"]:focus,
+  body input[type="range"]:focus,
+  body input[type="date"]:focus,
+  body input[type="month"]:focus,
+  body input[type="week"]:focus,
+  body input[type="time"]:focus,
+  body input[type="datetime"]:focus,
+  body input[type="datetime-local"]:focus,
+  body input[type="color"]:focus,
+  body textarea:focus, body textarea.form-control:focus,
+  body select.form-control:focus, .caldera-grid input[type="text"]:focus,
+  .caldera-grid input[type="email"]:focus,
+  .caldera-grid input[type="url"]:focus,
+  .caldera-grid input[type="password"]:focus,
+  .caldera-grid input[type="search"]:focus,
+  .caldera-grid input[type="number"]:focus,
+  .caldera-grid input[type="tel"]:focus,
+  .caldera-grid input[type="range"]:focus,
+  .caldera-grid input[type="date"]:focus,
+  .caldera-grid input[type="month"]:focus,
+  .caldera-grid input[type="week"]:focus,
+  .caldera-grid input[type="time"]:focus,
+  .caldera-grid input[type="datetime"]:focus,
+  .caldera-grid input[type="datetime-local"]:focus,
+  .caldera-grid input[type="color"]:focus,
+  .caldera-grid textarea:focus, .caldera-grid textarea.form-control:focus,
+  .caldera-grid select.form-control:focus {
+    border: 2px solid rgba(46, 64, 82, 0.5);
+    outline: none; }
+  body input[type="text"]:focus,
+  body input[type="email"]:focus,
+  body input[type="url"]:focus,
+  body input[type="password"]:focus,
+  body input[type="search"]:focus,
+  body input[type="number"]:focus,
+  body input[type="tel"]:focus,
+  body input[type="range"]:focus,
+  body input[type="date"]:focus,
+  body input[type="month"]:focus,
+  body input[type="week"]:focus,
+  body input[type="time"]:focus,
+  body input[type="datetime"]:focus,
+  body input[type="datetime-local"]:focus,
+  body input[type="color"]:focus,
+  body textarea:focus, body textarea.form-control:focus,
+  body select.form-control:focus, .caldera-grid input[type="text"]:focus,
+  .caldera-grid input[type="email"]:focus,
+  .caldera-grid input[type="url"]:focus,
+  .caldera-grid input[type="password"]:focus,
+  .caldera-grid input[type="search"]:focus,
+  .caldera-grid input[type="number"]:focus,
+  .caldera-grid input[type="tel"]:focus,
+  .caldera-grid input[type="range"]:focus,
+  .caldera-grid input[type="date"]:focus,
+  .caldera-grid input[type="month"]:focus,
+  .caldera-grid input[type="week"]:focus,
+  .caldera-grid input[type="time"]:focus,
+  .caldera-grid input[type="datetime"]:focus,
+  .caldera-grid input[type="datetime-local"]:focus,
+  .caldera-grid input[type="color"]:focus,
+  .caldera-grid textarea:focus, .caldera-grid textarea.form-control:focus,
+  .caldera-grid select.form-control:focus {
+    outline: none;
+    box-shadow: none; }
+
+body select.form-control, .caldera-grid select.form-control {
+  padding: 0px 0px 0px 10px; }
+
+input[type="checkbox"] {
+  margin-right: .5rem; }
+
+/* ==========================================================================
+   Search Form widget
+   ========================================================================== */
+.widget .search-form {
+  display: flex; }
+  .widget .search-form span {
+    display: none; }
+  .widget .search-form label {
+    display: block;
+    width: 100%; }
+  .widget .search-form input {
+    margin-top: 0;
+    width: 100%; }
+  .widget .search-form .search-submit {
+    display: none; }
+
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+input[type="submit"], .btn, .caldera-grid .btn.btn-default, .btn {
+  display: inline-block;
+  padding: 8px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .8rem;
+  letter-spacing: .15rem;
+  margin: 0 1px;
+  transition: .3s;
+  border: solid 2px #FFC857; }
+  input[type="submit"]:hover, .btn:hover, .caldera-grid .btn.btn-default:hover, .btn:hover {
+    background: #FFC857; }
+  input[type="submit"]:focus, .btn:focus, .caldera-grid .btn.btn-default:focus, .btn:focus {
+    color: #2E4052; }
+  input[type="submit"]:visited, .btn:visited, .caldera-grid .btn.btn-default:visited, .btn:visited {
+    color: #2E4052 !important; }
+  input[type="submit"].btn-xl, .btn.btn-xl, .caldera-grid .btn.btn-default.btn-xl, .btn.btn-xl {
+    font-size: 1.3rem;
+    padding: 1rem 1.7rem; }
+  input[type="submit"].btn-xs, .btn.btn-xs, .caldera-grid .btn.btn-default.btn-xs, .btn.btn-xs {
+    font-size: .85rem;
+    padding: 5px 10px;
+    border: none;
+    background: #2E4052;
+    color: white !important;
+    letter-spacing: .03rem;
+    text-transform: none; }
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+.admin-bar header.site-header {
+  margin-top: 32px; }
+
+@media screen and (min-width: 799px) {
+  .admin-bar header.site-header {
+    margin-top: 32px; } }
+
+@media screen and (max-width: 799px) {
+  .admin-bar header.site-header {
+    margin-top: 0px;
+    position: relative; }
+  .admin-bar {
+    padding-top: 0; } }
+
+header.site-header {
+  background: #412234;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  transition: all .3s; }
+  header.site-header .container {
+    display: flex;
+    align-items: center; }
+  header.site-header .site-branding {
+    display: flex;
+    align-items: middle; }
+  header.site-header .custom-logo-link, header.site-header .custom-logo {
+    margin-right: auto;
+    width: 130px;
+    height: 50px;
+    opacity: 1; }
+  header.site-header .menu-toggle {
+    display: none; }
+  header.site-header nav {
+    margin-left: auto; }
+    header.site-header nav ul {
+      list-style-type: none;
+      display: flex; }
+      header.site-header nav ul li {
+        display: block; }
+        header.site-header nav ul li a {
+          display: block;
+          padding: 8px 15px;
+          color: white;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: .8rem;
+          letter-spacing: .15rem;
+          margin: 0 1px;
+          transition: .3s;
+          border: solid 2px rgba(65, 34, 52, 0); }
+          header.site-header nav ul li a:hover {
+            background: white;
+            color: #412234; }
+        header.site-header nav ul li.menu-cta a {
+          border: solid 2px #FFC857;
+          box-sizing: border-box; }
+          header.site-header nav ul li.menu-cta a:hover {
+            color: #2E4052;
+            background: #FFC857; }
+
+@media screen and (max-width: 800px) {
+  .site-header {
+    position: relative; }
+    .site-header .menu-toggle {
+      display: block !important;
+      height: 40px;
+      width: 40px;
+      background: #301927;
+      margin-left: auto;
+      position: relative;
+      cursor: pointer; }
+      .site-header .menu-toggle span {
+        display: block;
+        height: 2px;
+        width: 20px;
+        background: white;
+        position: absolute;
+        top: 13px;
+        left: 10px;
+        transition: all .3s; }
+        .site-header .menu-toggle span:nth-child(2) {
+          top: 19px; }
+        .site-header .menu-toggle span:nth-child(3) {
+          top: 25px; }
+      .site-header .menu-toggle.active span {
+        transform: translateY(6px) rotate(45deg); }
+        .site-header .menu-toggle.active span:nth-child(2) {
+          transform: scale(0);
+          opacity: 0; }
+        .site-header .menu-toggle.active span:nth-child(3) {
+          transform: translateY(-6px) rotate(-45deg); }
+    .site-header nav {
+      background: #412234;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      visibility: hidden;
+      opacity: 0;
+      transition: all .4s;
+      z-index: 100; }
+      .site-header nav.active {
+        visibility: visible !important;
+        opacity: 1 !important; }
+      .site-header nav ul {
+        display: block !important;
+        width: 100%;
+        margin: 0;
+        padding: 0; }
+      .site-header nav li {
+        display: block;
+        width: 100%; }
+        .site-header nav li a {
+          border: none !important;
+          border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+          padding: 10px 30px !important; } }
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+.sticky {
+  display: block; }
+
+.hentry {
+  margin: 0 0 1.5em; }
+
+.updated:not(.published) {
+  display: none; }
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0; }
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em; }
+
+body {
+  padding-top: 71px; }
+
+@media screen and (min-width: 800px) {
+  body {
+    padding-top: 71px; } }
+
+@media screen and (max-width: 800px) {
+  body {
+    padding-top: 50px; } }
+
+/* ==========================================================================
+   Page Templates
+   ========================================================================== */
+.page-template-default, .template-left-sidebar, .template-right-sidebar {
+  margin-bottom: 2rem; }
+  .page-template-default .entry-title, .template-left-sidebar .entry-title, .template-right-sidebar .entry-title {
+    font-size: 2.7rem; }
+  .page-template-default aside, .template-left-sidebar aside, .template-right-sidebar aside {
+    margin-top: 7.05rem !important; }
+    .page-template-default aside .widget, .template-left-sidebar aside .widget, .template-right-sidebar aside .widget {
+      border-top: solid 2px rgba(46, 64, 82, 0.1);
+      padding: 1rem 0; }
+      .page-template-default aside .widget:first-of-type, .template-left-sidebar aside .widget:first-of-type, .template-right-sidebar aside .widget:first-of-type {
+        border-top: none; }
+  .page-template-default main, .template-left-sidebar main, .template-right-sidebar main {
+    padding-top: 2rem; }
+
+.home.page-template-default main {
+  padding-top: 0; }
+
+@media screen and (max-width: 800px) {
+  .template-left-sidebar aside {
+    order: 2 !important; } }
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.dakar_hero-section {
+  background: #BDD9BF;
+  height: calc(100vh - 71px);
+  position: relative;
+  color: white;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  letter-spacing: .15rem;
+  text-align: center; }
+  .dakar_hero-section h1 {
+    margin: 1rem 0;
+    line-height: 1.1; }
+  .dakar_hero-section h3 {
+    margin-bottom: 2rem;
+    line-height: 1.3; }
+  .dakar_hero-section .btn, .dakar_hero-section h3, .dakar_hero-section a, .dakar_hero-section .btn:visited {
+    color: white !important; }
+  .dakar_hero-section .btn:hover {
+    text-shadow: none;
+    color: #2E4052 !important; }
+  .dakar_hero-section .background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; }
+  .dakar_hero-section .bg-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(65, 34, 52, 0.6);
+    opacity: 1;
+    z-index: 1; }
+  .dakar_hero-section .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2; }
+  .dakar_hero-section .caption {
+    margin: 0 auto;
+    mix-blend-mode: darken; }
+  .dakar_hero-section .side-links {
+    position: absolute;
+    height: 50px;
+    top: 70px;
+    left: calc(-70vh + 50px + 1.6%);
+    z-index: 4;
+    width: 70vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    transform-origin: 100% 100%;
+    transform: rotate(-90deg); }
+    .dakar_hero-section .side-links a {
+      font-weight: unset;
+      text-transform: uppercase;
+      transition: all .3s;
+      font-size: .8rem;
+      align-self: center;
+      transform-origin: 0 50%;
+      transition-delay: .3s; }
+      .dakar_hero-section .side-links a:hover {
+        color: #FFC857 !important; }
+
+@media screen and (max-width: 800px) {
+  .dakar_hero-section {
+    height: calc(100vh - 50px); }
+    .dakar_hero-section .side-links {
+      display: none; } }
+
+/* ==========================================================================
+   Testimonial
+   ========================================================================== */
+.animated.bg-slide {
+  background-color: transparent !important;
+  position: relative; }
+  .animated.bg-slide:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(46, 64, 82, 0.05);
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: all cubic-bezier(0.8, 0.01, 0.15, 0.99) 2s; }
+  .animated.bg-slide.visible:before {
+    transform: translateX(0%); }
+
+.light-bg {
+  background-color: rgba(46, 64, 82, 0.05); }
+
+.testimonial-section .container {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+
+.testimonial-slider {
+  background: white;
+  position: relative;
+  overflow: hidden;
+  height: 465px;
+  max-width: 300px;
+  margin: 0 auto; }
+  .testimonial-slider .item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    padding: 30px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s; }
+    .testimonial-slider .item b {
+      display: block; }
+    .testimonial-slider .item svg {
+      display: block;
+      background: #BDD9BF;
+      padding: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin: 0 auto;
+      margin-bottom: 20px; }
+    .testimonial-slider .item.active {
+      visibility: visible;
+      opacity: 1; }
+  .testimonial-slider .dots {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    font-size: 0;
+    justify-content: center;
+    align-items: center; }
+    .testimonial-slider .dots .next, .testimonial-slider .dots .prev {
+      font-size: .8rem;
+      color: rgba(46, 64, 82, 0.3);
+      transition: all .3s;
+      cursor: pointer;
+      margin: 0 30px; }
+      .testimonial-slider .dots .next:hover, .testimonial-slider .dots .prev:hover {
+        color: #2E4052; }
+    .testimonial-slider .dots .next {
+      margin-left: auto; }
+    .testimonial-slider .dots .prev {
+      margin-right: auto; }
+    .testimonial-slider .dots .dot {
+      display: inline-block;
+      margin: 3px;
+      height: 7px;
+      width: 7px;
+      border-radius: 50%;
+      background: rgba(46, 64, 82, 0.3);
+      transition: all .5s; }
+      .testimonial-slider .dots .dot.active {
+        background: #2e4052;
+        transform: scale(1.3); }
+
+/* ==========================================================================
+   Hotelrooms section
+   ========================================================================== */
+.section-hotel-rooms {
+  position: relative;
+  overflow: hidden;
+  padding: 70px 0; }
+  .section-hotel-rooms .rooms-slider-navigation {
+    display: flex; }
+    .section-hotel-rooms .rooms-slider-navigation .prev, .section-hotel-rooms .rooms-slider-navigation .next {
+      color: white;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 15px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      transition: all .3s;
+      cursor: pointer;
+      color: rgba(0, 0, 0, 0.5) !important;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+      margin: 20px 10px 20px 0; }
+      .section-hotel-rooms .rooms-slider-navigation .prev:hover, .section-hotel-rooms .rooms-slider-navigation .next:hover {
+        color: rgba(0, 0, 0, 0.8);
+        transform: scale(1.05);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); }
+  .section-hotel-rooms .container {
+    position: relative; }
+  .section-hotel-rooms .gradient {
+    display: block;
+    height: 100%;
+    width: 40%;
+    background: linear-gradient(to left, white 10%, transparent);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 4;
+    pointer-events: none; }
+  .section-hotel-rooms .wrapper {
+    overflow-X: scroll;
+    position: relative; }
+    .section-hotel-rooms .wrapper::-webkit-scrollbar {
+      display: none; }
+    .section-hotel-rooms .wrapper .slider-featured-rooms {
+      position: relative;
+      display: flex;
+      width: max-content;
+      padding-right: calc(100% - 300px); }
+    .section-hotel-rooms .wrapper .item {
+      box-sizing: border-box;
+      max-width: 300px;
+      text-align: center;
+      background: rgba(46, 64, 82, 0.05);
+      margin-right: 30px;
+      font-size: .85rem; }
+      .section-hotel-rooms .wrapper .item:last-of-type {
+        margin-right: 0; }
+      .section-hotel-rooms .wrapper .item .thumb {
+        padding-top: 60%;
+        position: relative; }
+      .section-hotel-rooms .wrapper .item .thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+      .section-hotel-rooms .wrapper .item .caption {
+        padding: 30px; }
+      .section-hotel-rooms .wrapper .item.best-seller .thumb:after {
+        position: absolute;
+        padding: 6px;
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        font-weight: bold;
+        padding-top: 22px;
+        font-size: .8rem;
+        border-radius: 50%;
+        line-height: 1;
+        text-transform: uppercase;
+        top: -10px;
+        left: calc(50% - 35px);
+        content: "Best Seller";
+        display: block;
+        background: #FFC857;
+        z-index: 5; }
+
+/* ==========================================================================
+   Instagram Feed
+   ========================================================================== */
+.instafeed-section .description {
+  background: rgba(0, 0, 0, 0.8) !important;
+  padding: 10px 0;
+  text-align: center;
+  color: white;
+  font-size: .85rem; }
+  .instafeed-section .description .btn {
+    border-radius: 3px;
+    background: #4c68d7;
+    margin-right: 10px; }
+
+.instafeed-section #instafeed {
+  display: flex; }
+  .instafeed-section #instafeed .post {
+    flex-basis: 10%;
+    position: relative;
+    padding-top: 10%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.8); }
+    .instafeed-section #instafeed .post img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .instafeed-section #instafeed .post .meta {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 3px 8px;
+      margin: 5px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 2px;
+      color: white; }
+
+@media screen and (max-width: 800px) {
+  .instafeed-section #instafeed {
+    flex-wrap: wrap; }
+    .instafeed-section #instafeed .post {
+      flex-basis: 20%;
+      padding-top: 20%; }
+      .instafeed-section #instafeed .post .meta {
+        font-size: .8rem; } }
+
+/* ==========================================================================
+   Surrounding Slideshow
+   ========================================================================== */
+.dakar_section-surrounding-slides {
+  padding: 70px 0px; }
+  .dakar_section-surrounding-slides .slides-vignettes {
+    height: 30%;
+    grid-gap: 15px; }
+    .dakar_section-surrounding-slides .slides-vignettes .vignette {
+      display: block;
+      overflow: hidden !important;
+      position: relative;
+      transition: all .3s;
+      background-color: white;
+      cursor: pointer; }
+      .dakar_section-surrounding-slides .slides-vignettes .vignette img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: .3;
+        transition: all .7s;
+        filter: grayscale(100%); }
+      .dakar_section-surrounding-slides .slides-vignettes .vignette.current img, .dakar_section-surrounding-slides .slides-vignettes .vignette:hover img {
+        opacity: 1;
+        filter: grayscale(0%); }
+  .dakar_section-surrounding-slides .description {
+    padding: 1px;
+    min-height: 70%;
+    display: flex; }
+    .dakar_section-surrounding-slides .description > div {
+      justify-content: center;
+      align-items: center;
+      margin: auto auto;
+      max-width: 350px; }
+    .dakar_section-surrounding-slides .description .btn {
+      margin-bottom: 20px; }
+  .dakar_section-surrounding-slides .slides {
+    position: relative;
+    padding-top: 130%;
+    overflow: hidden; }
+    .dakar_section-surrounding-slides .slides .item {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      transition: all 1s;
+      opacity: 0;
+      visibility: hidden;
+      overflow: hidden; }
+      .dakar_section-surrounding-slides .slides .item img {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        object-fit: cover;
+        object-position: center;
+        transform: scale(1.05);
+        transition: all 1.5s; }
+      .dakar_section-surrounding-slides .slides .item.current {
+        opacity: 1;
+        visibility: visible; }
+        .dakar_section-surrounding-slides .slides .item.current img {
+          transform: scale(1); }
+  .dakar_section-surrounding-slides .slides-container {
+    position: relative; }
+  .dakar_section-surrounding-slides .slides-nav {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: 0;
+    width: 100%;
+    display: flex;
+    z-index: 10;
+    font-size: 1rem;
+    color: white;
+    justify-content: space-between; }
+    .dakar_section-surrounding-slides .slides-nav .next, .dakar_section-surrounding-slides .slides-nav .prev {
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 15px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      transition: all .3s;
+      cursor: pointer;
+      color: rgba(0, 0, 0, 0.5) !important;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); }
+      .dakar_section-surrounding-slides .slides-nav .next:hover, .dakar_section-surrounding-slides .slides-nav .prev:hover {
+        color: rgba(0, 0, 0, 0.8);
+        transform: scale(1.05);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); }
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer.site-footer {
+  background-color: #412234;
+  color: white;
+  letter-spacing: .05rem; }
+  footer.site-footer h3 {
+    margin-top: 0;
+    color: white;
+    margin-bottom: 10px; }
+  footer.site-footer .custom-logo {
+    width: 100%;
+    max-width: 200px; }
+  footer.site-footer a {
+    color: white;
+    font-weight: 300; }
+  footer.site-footer .copyright {
+    background: #301927;
+    font-size: .8rem;
+    margin-top: 100px;
+    padding: 10px 0;
+    text-align: center; }
+    footer.site-footer .copyright a {
+      color: #FFC857;
+      font-weight: 400; }
+  footer.site-footer .footer-social {
+    margin-bottom: 70px;
+    padding-top: 30px;
+    font-size: 0rem;
+    text-align: center; }
+    footer.site-footer .footer-social a {
+      display: inline-block;
+      box-sizing: border-box;
+      font-size: 20px;
+      margin: 0 10px;
+      border-radius: 50px;
+      padding: 11px;
+      width: 50px;
+      height: 50px;
+      color: rgba(255, 255, 255, 0.5);
+      transition: all .3s;
+      background-color: rgba(255, 255, 255, 0.05); }
+      footer.site-footer .footer-social a:hover {
+        color: white; }
+
+@media screen and (max-width: 600px) {
+  .site-footer {
+    text-align: center; } }
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0; }
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%; }
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+  display: inline-block; }
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# animations
+--------------------------------------------------------------*/
+.anim_mouse-scroll {
+  position: absolute;
+  bottom: 30px;
+  left: calc(50% - 1px); }
+  .anim_mouse-scroll span {
+    display: block;
+    width: 2px;
+    background: white;
+    height: 60px;
+    animation: mousescroll cubic-bezier(0.82, 0.01, 0.27, 1) 2s infinite; }
+
+@keyframes mousescroll {
+  0% {
+    height: 10px; }
+  50% {
+    height: 60px; }
+  100% {
+    height: 10px; } }
